@@ -1,12 +1,12 @@
 const catResult = document.getElementById("cat-result");
 const catButton = document.getElementById("catButton");
 
-dogButton.addEventListener("click", getRandomCat);
+catButton.addEventListener("click", getRandomCat);
 
 function getRandomCat() {
-    fetch("https://cataas.com/cat")
+    fetch("https://cataas.com/cat?json=true")
         .then((res) => res.json())
         .then((data) => {
-            catResult.innerHTML = `<img src="${data.message}"/>`;
+            catResult.innerHTML = `<img src="https://cataas.com/${data.url}"/>`;
         });
     }
