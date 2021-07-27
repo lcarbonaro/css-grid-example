@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .divGrid {
+            display: grid;
+            /* these were the key things missing before */
+            width: 100vw;       
+            height: 100vh;
+            /**/
+            grid-template-rows: repeat(2, auto);
+        }
+        .row1 {
+            background-color: red;
+        }
+        .row2 {
+            background-color: blue;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="divGrid">
+        <div class="row1">
+            red
+        </div>
+        <div class="row2">
+            blue
+        </div>
+
+    </div>
+
+</body>
+
+</html>
